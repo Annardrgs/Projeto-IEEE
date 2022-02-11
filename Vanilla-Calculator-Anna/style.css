@@ -1,0 +1,130 @@
+:root {
+  --page_background: linear-gradient(45deg, #1b212c 0%, #32316b 100%);
+  
+  --display: linear-gradient(45deg, #364873 0%, #9899BD 100%);
+  --display_number: #ffffff;
+
+  --number: #000000;
+  --number_buttons: #ffffff;
+  --operator_button: #e0e0e0;
+  --buttons_hover: #5a75b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--page_background);
+  padding: 50px;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 320px;
+
+  background: white;
+  box-shadow: 10px 9px 10px -3px rgba(0,0,0,0.10);
+}
+
+#calculator button {
+  height: 80px;
+  width: 80px;
+  transition: .1s linear;
+  color: var(--number);
+}
+
+.numbersButton {
+  background-color: var(--number_buttons);
+  cursor: pointer;
+}
+
+.numbersButton:hover {
+  background-color: var(--buttons_hover);
+}
+
+.numbersButtonOff {
+  background-color: var(--number_buttons);
+}
+
+.numbersButtonOff:hover {
+  background: var(--number_buttons);
+}
+
+.operatorButton {
+  background-color: var(--operator_button);
+  cursor: pointer;
+}
+
+.operatorButton:hover {
+  background-color: var(--buttons_hover);
+}
+
+.operatorButtonOff {
+  background-color: var(--operator_button);
+}
+
+.submitButton {
+  background: var(--display);
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  filter: brightness(0.90);
+}
+
+#calculator form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator form #display {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  padding: 0 20px 15px 0;
+
+  color: var(--display_number);
+
+  height: 110px;
+  width: 100%;
+
+  font-size: 1.5rem;
+  
+  background: var(--display)
+}
+
+#calculator form #buttonsGrid {
+  display: flex;
+  align-items: baseline;
+}
+
+#calculator form #buttonsGrid #numbersGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#calculator form #buttonsGrid #operatorsGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+
